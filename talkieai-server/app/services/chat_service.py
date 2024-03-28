@@ -19,7 +19,7 @@ MESSAGE_SYSTEM = "SYSTEM"
 
 # 读取data下 language_demo_map.json 生成对应字典
 language_demo_map = {}
-with open("data/language_demo_map.json", "r") as f:
+with open("data/language_demo_map.json", "r", encoding='utf-8') as f:
     language_demo_map = json.load(f)
 
 

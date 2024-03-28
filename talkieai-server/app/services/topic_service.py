@@ -438,7 +438,7 @@ class TopicService:
             return
 
         # 根据配置文件生成默认数据
-        with open("data/default_topic_data.json", "r") as f:
+        with open("data/default_topic_data.json", "r", encoding='utf-8') as f:
             topic_data = json.load(f)
 
         default_account = "system_init"

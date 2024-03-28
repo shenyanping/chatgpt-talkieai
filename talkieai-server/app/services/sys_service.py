@@ -14,7 +14,7 @@ from app.core.language import *
 # 读取data下 language_demo_map.json 生成对应字典
 LANGUAGE_DICT_KEY = "learn_language"
 language_demo_map = {}
-with open("data/language_demo_map.json", "r") as f:
+with open("data/language_demo_map.json", "r", encoding='utf-8') as f:
     language_demo_map = json.load(f)
 
 
@@ -135,7 +135,7 @@ class SysService:
             return
 
         # 加载 data下 sys_language.json文件，生成初始值
-        with open("data/sys_language.json", "r") as f:
+        with open("data/sys_language.json", "r", encoding='utf-8') as f:
             sys_language = json.load(f)
         # 保存到数据库中
         for language in sys_language:

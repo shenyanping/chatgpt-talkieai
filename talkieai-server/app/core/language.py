@@ -4,11 +4,11 @@ from app.core.logging import logging
 language_data = []
 
 azure_data = {}
-with open("data/azure.json", "r") as f:
+with open("data/azure.json", "r", encoding='utf-8') as f:
     azure_data = json.load(f)
 
 azure_style_label_data = []
-with open("data/azure_style_label.json", "r") as f:
+with open("data/azure_style_label.json", "r", encoding='utf-8') as f:
     azure_style_label_data = json.load(f) 
 
 azure_style_label_map = {}
@@ -16,7 +16,7 @@ for item in azure_style_label_data:
     azure_style_label_map[item["value"]] = item["label"]   
 
 sys_language_data = {}
-with open("data/sys_language.json", "r") as f:
+with open("data/sys_language.json", "r", encoding='utf-8') as f:
     sys_language_data = json.load(f)
 
 def get_label_by_language(language: str) -> str:
