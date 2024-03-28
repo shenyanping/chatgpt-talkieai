@@ -16,6 +16,7 @@ class Config:
 
     # 微软语音
     AZURE_KEY = os.getenv('AZURE_KEY')
+    AZURE_REGION = os.getenv('AZURE_REGION')
 
     # AI
     AI_SERVER = os.getenv('AI_SERVER')
